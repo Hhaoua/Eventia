@@ -5,7 +5,7 @@
 @section('content')
 
 {{-- Hero Section --}}
-<section class="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white overflow-hidden">
+<section class="relative bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 text-white overflow-hidden">
     {{-- Motif de fond --}}
     <div class="absolute inset-0 opacity-10">
         <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.1%22%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
@@ -30,7 +30,7 @@
                         sans effort
                     </h1>
 
-                    <p class="text-xl lg:text-2xl text-blue-100 leading-relaxed">
+                    <p class="text-xl lg:text-2xl text-purple-100 leading-relaxed">
                         Des rencontres intimistes aux grandes conférences, gérez chaque aspect de vos événements 
                         avec notre plateforme complète : inscriptions, billetterie et analyses – tout en un seul endroit.
                     </p>
@@ -40,25 +40,25 @@
                 <div class="grid grid-cols-3 gap-8 py-8 text-center">
                     <div>
                         <div class="text-2xl lg:text-3xl font-bold text-yellow-300">10K+</div>
-                        <div class="text-sm lg:text-base text-blue-200">Événements créés</div>
+                        <div class="text-sm lg:text-base text-purple-200">Événements créés</div>
                     </div>
                     <div>
                         <div class="text-2xl lg:text-3xl font-bold text-yellow-300">500K+</div>
-                        <div class="text-sm lg:text-base text-blue-200">Participants heureux</div>
+                        <div class="text-sm lg:text-base text-purple-200">Participants heureux</div>
                     </div>
                     <div>
                         <div class="text-2xl lg:text-3xl font-bold text-yellow-300">95%</div>
-                        <div class="text-sm lg:text-base text-blue-200">Taux de satisfaction</div>
+                        <div class="text-sm lg:text-base text-purple-200">Taux de satisfaction</div>
                     </div>
                 </div>
 
                 {{-- Boutons --}}
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="{{ route('register.form') }}" class="group bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-opacity-95 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
+                    <a href="{{ route('register.form') }}" class="group bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-opacity-95 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
         
                         <span>Commencer maintenant</span>
                     </a>
-                    <a href="{{ route('events.index') }}" class="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                    <a href="{{ route('events.index') }}" class="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
                         
                         <span>Explorer les événements</span>
                     </a>
@@ -72,7 +72,7 @@
                             <img class="h-8 w-8 rounded-full border-2 border-white" src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" alt="Utilisateur" />
                             <img class="h-8 w-8 rounded-full border-2 border-white" src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg" alt="Utilisateur" />
                         </div>
-                        <span class="text-sm text-blue-200">Plébiscité par des organisateurs du monde entier</span>
+                        <span class="text-sm text-purple-200">Plébiscité par des organisateurs du monde entier</span>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                                 <h3 class="font-semibold text-gray-900">{{ $card['title'] }}</h3>
                                 @if($card['date']) <p class="text-sm text-gray-600">{{ $card['date'] }}</p> @endif
                                 @if($card['participants']) <span class="text-green-600 font-medium">{{ $card['participants'] }}</span> @endif
-                                @if($card['price']) <span class="text-blue-600">{{ $card['price'] }}</span> @endif
+                                @if($card['price']) <span class="text-purple-600">{{ $card['price'] }}</span> @endif
                             </div>
                         </div>
                     </div>
@@ -149,14 +149,14 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
-                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Rechercher par titre..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200">
+                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Rechercher par titre..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200">
                     </div>
                 </div>
 
                 <!-- Catégorie -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Catégorie</label>
-                    <select name="category" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200">
+                    <select name="category" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200">
                         <option value="">Toutes les catégories</option>
                         @foreach(['Conférence', 'Atelier', 'Webinaire', 'Sommet', 'Autre'] as $category)
                             <option value="{{ $category }}" {{ request('category') === $category ? 'selected' : '' }}>{{ $category }}</option>
@@ -167,7 +167,7 @@
                 <!-- Type -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Type d'événement</label>
-                    <select name="type" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200">
+                    <select name="type" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200">
                         <option value="">Tous les types</option>
                         <option value="gratuit" {{ request('type') === 'gratuit' ? 'selected' : '' }}>Gratuit</option>
                         <option value="payant" {{ request('type') === 'payant' ? 'selected' : '' }}>Payant</option>
@@ -177,18 +177,18 @@
                 <!-- Date de début -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Date de début</label>
-                    <input type="date" name="dateFrom" value="{{ request('dateFrom') }}" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200">
+                    <input type="date" name="dateFrom" value="{{ request('dateFrom') }}" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200">
                 </div>
 
                 <!-- Date de fin -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Date de fin</label>
-                    <input type="date" name="dateTo" value="{{ request('dateTo') }}" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200">
+                    <input type="date" name="dateTo" value="{{ request('dateTo') }}" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200">
                 </div>
             </div>
 
             <div class="mt-6 flex justify-end">
-                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
                     Appliquer les filtres
                 </button>
             </div>
@@ -199,7 +199,7 @@
             {{-- Boucle sur vos événements --}}
           @foreach ($events as $event)
             <div onclick="window.location='{{ route('events.show', $event) }}'"
-                class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden group border border-gray-100 hover:border-blue-200">
+                class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden group border border-gray-100 hover:border-purple-200">
                 <div class="relative overflow-hidden">
                     <img src="{{ $event->image_url }}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" alt="{{ $event->titre }}">
                     @if($event->featured)
@@ -207,7 +207,7 @@
                         ⭐<span>En vedette</span>
                     </div>
                     @endif
-                    <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-sm font-medium {{ $event->tarif > 0 ? 'bg-blue-100 text-blue-700' : 'bg-green-100 text-green-700' }}">
+                    <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-sm font-medium {{ $event->tarif > 0 ? 'bg-purple-100 text-purple-700' : 'bg-green-100 text-green-700' }}">
                         {{ $event->tarif > 0 ? 'FCFA'.$event->tarif : 'Gratuit' }}
                     </div>
                 </div>
@@ -218,7 +218,7 @@
                             {{ $event->places_max - $event->inscrits_count }} places restantes
                         </span>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200 line-clamp-2">
+                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-200 line-clamp-2">
                         {{ $event->titre }}
                     </h3>
                     <p class="text-gray-600 text-sm leading-relaxed line-clamp-2">{{ $event->shortDescription }}</p>
@@ -231,7 +231,7 @@
                         <p class="text-xs text-gray-500">Organisé par <span class="font-medium text-gray-700">{{ $event->organisateur->name ?? 'Inconnu' }}</span></p>
                     </div>
                     <div class="w-full bg-gray-200 rounded-full h-1.5">
-                        <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-1.5 rounded-full" 
+                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-1.5 rounded-full" 
                             style="width: {{ $event->places_max > 0 ? ($event->inscrits_count / $event->places_max) * 100 : 0 }}%;">
                         </div>
                     </div>
@@ -242,7 +242,7 @@
         </div>
 
         <div class="text-center">
-            <a href="{{ route('events.index') }}" class="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-300">
+            <a href="{{ route('events.index') }}" class="inline-flex items-center space-x-2 bg-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-700 transition-all duration-300">
                 <span>Voir tous les événements</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />

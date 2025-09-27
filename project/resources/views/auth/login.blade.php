@@ -5,7 +5,7 @@
 @section('content')
 <div class="flex items-center justify-center min-h-screen bg-gray-50">
     <div class="bg-white rounded-xl shadow-2xl w-full max-w-md mx-4">
-     <div class="flex items-center justify-between p-6 border-b border-gray-100">
+        <div class="flex items-center justify-between p-6 border-b border-gray-100">
             <h2 class="text-xl font-semibold text-gray-900 text-center w-full">Se connecter</h2>
             <a href="{{ route('home') }}" class="absolute right-4 top-4 p-2 text-gray-400 hover:text-gray-600">
                 ✕
@@ -28,33 +28,33 @@
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
                 <input type="email" name="email" value="{{ old('email') }}" required
-                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                        placeholder="ex: marie@eventia.fr">
             </div>
 
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1">Mot de passe</label>
                 <input type="password" name="password" required
-                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                        placeholder="••••••••">
             </div>
 
             <button type="submit"
-                    class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+                    class="w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
                 Se connecter
             </button>
 
             <div class="text-center pt-4">
-                <a href="{{ route('register.form') }}" class="text-blue-600 hover:text-blue-700 text-sm">
+                <a href="{{ route('register.form') }}" class="text-purple-600 hover:text-purple-700 text-sm">
                     Pas encore de compte ? Inscrivez-vous
                 </a>
             </div>
 
             <!-- Astuce : comptes démo -->
-            <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 mt-4">
-                <p class="text-sm text-blue-800 font-medium mb-1">Comptes de démonstration :</p>
-                <p class="text-xs text-blue-700">Organisateur : marie@eventia.fr</p>
-                <p class="text-xs text-blue-700">Participant : jean@eventia.fr</p>
+            <div class="bg-purple-50 border border-purple-200 rounded-lg p-3 mt-4">
+                <p class="text-sm text-purple-800 font-medium mb-1">Comptes de démonstration :</p>
+                <p class="text-xs text-purple-700">Organisateur : marie@eventia.fr</p>
+                <p class="text-xs text-purple-700">Participant : jean@eventia.fr</p>
             </div>
         </form>
     </div>

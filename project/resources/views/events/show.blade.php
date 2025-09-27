@@ -52,7 +52,7 @@
                 <form action="{{ route('events.register', $event->id) }}" method="POST">
                     @csrf
                     <button type="submit"
-                        class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700">
+                        class="px-6 py-2 bg-purple-600 text-white font-semibold rounded-lg shadow hover:bg-purple-700">
                         S’inscrire
                     </button>
                 </form>

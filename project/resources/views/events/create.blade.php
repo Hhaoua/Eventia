@@ -87,11 +87,11 @@
             <label class="block text-sm font-medium text-gray-700 mb-1">Type d’événement *</label>
             <div class="flex space-x-4">
                 <label class="flex items-center space-x-2">
-                    <input type="radio" name="type" value="free" {{ old('type', 'free') === 'free' ? 'checked' : '' }} required>
+                    <input type="radio" name="type" value="gratuit" {{ old('type', 'gratuit') === 'gratuit' ? 'checked' : '' }} required>
                     <span>Gratuit</span>
                 </label>
                 <label class="flex items-center space-x-2">
-                    <input type="radio" name="type" value="paid" {{ old('type') === 'paid' ? 'checked' : '' }} required>
+                    <input type="radio" name="type" value="payant" {{ old('type') === 'payant' ? 'checked' : '' }} required>
                     <span>Payant</span>
                 </label>
             </div>
@@ -99,7 +99,7 @@
         </div>
 
         {{-- Prix si payant --}}
-        <div id="priceField" class="{{ old('type') === 'paid' ? '' : 'hidden' }}">
+        <div id="priceField" class="{{ old('type') === 'payant' ? '' : 'hidden' }}">
             <label class="block text-sm font-medium text-gray-700 mb-1">Prix du billet (EUR) *</label>
             <input type="number" step="0.01" min="0" name="tarif" value="{{ old('tarif') }}"
                 class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent @error('tarif') border-red-300 @enderror"
@@ -119,7 +119,7 @@
         {{-- Bouton --}}
         <div class="flex justify-end">
             <button type="submit"
-                class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium">Créer l'événement</button>
+                class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-medium">Créer l'événement</button>
         </div>
     </form>
 </div>
@@ -131,9 +131,9 @@
 
     radios.forEach(radio => {
         radio.addEventListener('change', () => {
-            if(radio.value === 'paid' && radio.checked){
+            if(radio.value === 'payant' && radio.checked){
                 priceField.classList.remove('hidden');
-            } else if(radio.value === 'free' && radio.checked){
+            } else if(radio.value === 'gratuit' && radio.checked){
                 priceField.classList.add('hidden');
             }
         });

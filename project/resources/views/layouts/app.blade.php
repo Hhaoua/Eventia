@@ -13,16 +13,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 {{-- Logo --}}
-               {{-- logo cliquable --}}
                 <a href="{{ url('/') }}" class="flex items-center space-x-2 group">
-                    <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-2 rounded-lg">
+                    <div class="bg-gradient-to-r from-purple-600 to-purple-700 p-2 rounded-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                     </div>
                     <div>
-                        <h1 class="text-xl font-bold text-blue-900 group-hover:text-blue-700 transition">Eventia</h1>
-                        <p class="text-xs text-blue-600">Gestion d'événements</p>
+                        <h1 class="text-xl font-bold text-purple-900 group-hover:text-purple-700 transition">Eventia</h1>
+                        <p class="text-xs text-purple-600">Gestion d'événements</p>
                     </div>
                 </a>
 
@@ -37,7 +36,7 @@
                             name="q"
                             placeholder="Rechercher des événements..."
                             value="{{ request('q') }}"
-                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                         />
                     </form>
                 </div>
@@ -46,7 +45,7 @@
                 <div class="flex items-center space-x-4">
                     @auth
                         @if(auth()->user()->role === 'organisateur')
-                            <a href="{{ route('events.create') }}" class="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                            <a href="{{ route('events.create') }}" class="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-200">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                                 </svg>
@@ -57,8 +56,8 @@
                         {{-- Dropdown utilisateur --}}
                         <div class="relative">
                             <button id="userMenuButton" class="flex items-center space-x-2 focus:outline-none">
-                                <div class="bg-blue-100 p-2 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <div class="bg-purple-100 p-2 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A4.992 4.992 0 0112 15a4.992 4.992 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                 </div>
@@ -91,7 +90,7 @@
                         </script>
 
                     @else
-                        <a href="{{ route('login.form') }}" class="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                        <a href="{{ route('login.form') }}" class="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
@@ -115,7 +114,7 @@
                 {{-- Marque --}}
                 <div class="space-y-4">
                     <div class="flex items-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         <span class="text-2xl font-bold">Eventia</span>
@@ -157,19 +156,19 @@
                     <h3 class="text-lg font-semibold">Nous contacter</h3>
                     <div class="space-y-3">
                         <div class="flex items-center space-x-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 4H8m0-8h8M3 7v14a2 2 0 002 2h14a2 2 0 002-2V7M3 7l9 6 9-6" />
                             </svg>
                             <span class="text-gray-300">support@eventia.com</span>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h2l3 7-1 2 5 5 2-1 7 3v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
                             </svg>
                             <span class="text-gray-300">+1 (555) 123-4567</span>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a2 2 0 00-2-2h-3v4zM2 9V7a2 2 0 012-2h3v4H4a2 2 0 01-2-2z" />
                             </svg>
                             <span class="text-gray-300">123 Rue des Événements, Ville, Pays</span>
