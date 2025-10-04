@@ -100,7 +100,7 @@
 
         {{-- Prix si payant --}}
         <div id="priceField" class="{{ old('type') === 'payant' ? '' : 'hidden' }}">
-            <label class="block text-sm font-medium text-gray-700 mb-1">Prix du billet (EUR) *</label>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Prix du billet (FCFA) *</label>
             <input type="number" step="0.01" min="0" name="tarif" value="{{ old('tarif') }}"
                 class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent @error('tarif') border-red-300 @enderror"
                 placeholder="0.00">

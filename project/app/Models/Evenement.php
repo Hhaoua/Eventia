@@ -18,12 +18,12 @@ class Evenement extends Model
         'date',
         'lieu',
         'category',
-        'type',       // free ou paid
-        'tarif',      // prix si paid
-        'places_max', // nombre maximal de participants
-        'inscrits_count', // nombre actuel de participants
-        'statut',     // published, draft, etc.
-        'image_url',  // URL de l'image
+        'type',
+        'tarif',
+        'places_max',
+        'inscrits_count',
+        'statut',
+        'image_url',
         'organisateur_id'
     ];
 
@@ -39,7 +39,7 @@ class Evenement extends Model
         return $this->belongsTo(User::class, 'organisateur_id');
     }
 
-    
+
     public function participants()
     {
         return $this->belongsToMany(User::class, 'participer', 'evenement_id', 'user_id');

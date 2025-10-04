@@ -23,7 +23,7 @@
                     </div>
 
                     <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
-                        Créez des 
+                        Créez des
                         <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
                             événements exceptionnels
                         </span>
@@ -31,7 +31,7 @@
                     </h1>
 
                     <p class="text-xl lg:text-2xl text-purple-100 leading-relaxed">
-                        Des rencontres intimistes aux grandes conférences, gérez chaque aspect de vos événements 
+                        Des rencontres intimistes aux grandes conférences, gérez chaque aspect de vos événements
                         avec notre plateforme complète : inscriptions, billetterie et analyses – tout en un seul endroit.
                     </p>
                 </div>
@@ -55,11 +55,11 @@
                 {{-- Boutons --}}
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="{{ route('register.form') }}" class="group bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-opacity-95 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
-        
+
                         <span>Commencer maintenant</span>
                     </a>
                     <a href="{{ route('events.index') }}" class="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
-                        
+
                         <span>Explorer les événements</span>
                     </a>
                 </div>
@@ -231,7 +231,7 @@
                         <p class="text-xs text-gray-500">Organisé par <span class="font-medium text-gray-700">{{ $event->organisateur->name ?? 'Inconnu' }}</span></p>
                     </div>
                     <div class="w-full bg-gray-200 rounded-full h-1.5">
-                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-1.5 rounded-full" 
+                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-1.5 rounded-full"
                             style="width: {{ $event->places_max > 0 ? ($event->inscrits_count / $event->places_max) * 100 : 0 }}%;">
                         </div>
                     </div>

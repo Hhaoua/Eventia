@@ -52,4 +52,9 @@ class User extends Authenticatable
         return $this->belongsToMany(Evenement::class, 'participer', 'user_id', 'evenement_id');
     }
 
+    public function inscriptions()
+    {
+        return $this->hasMany(\App\Models\Inscription::class);
+    }
+
 }
